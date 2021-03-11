@@ -36,7 +36,7 @@ jobs:
       run: echo running on branch ${GITHUB_REF##*/}
     - name: NextGen Static Analysis
       run: |
-          cd copper-serve \
+          cd copper-server 
           ${GITHUB_WORKSPACE}/sl analyze --wait --app copper-cms --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --java --sca --cpg target/copper-server-*.war
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
