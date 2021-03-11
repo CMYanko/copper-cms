@@ -5,7 +5,7 @@ name: ShiftLeft
 
 on:
   # Trigger the workflow on push or pull request,
-  # but only for the master branch
+  # but only for the master branch.
   push:
     branches:
       - master
@@ -24,7 +24,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Package with maven
-      run: mvn clean package -DskipTests=true
+      run: mvn clean install -DskipTests=true
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
@@ -35,7 +35,9 @@ jobs:
     - name: Branch name
       run: echo running on branch ${GITHUB_REF##*/}
     - name: NextGen Static Analysis
-      run: ${GITHUB_WORKSPACE}/sl analyze --wait --app copper-cms --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --java --sca --cpg copper-server/target/copper-server-*.war
+      run: |
+          cd copper-server 
+          ${GITHUB_WORKSPACE}/sl analyze --wait --app copper-cms --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --java --sca --cpg target/copper-server-*.war
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_ORG_ID: ${{ secrets.SHIFTLEFT_ORG_ID }}
