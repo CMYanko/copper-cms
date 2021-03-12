@@ -481,11 +481,3 @@
     <outputDirectory>/Users/curtis/Documents/GitHub/copper-cms/copper-server/target/site</outputDirectory>
   </reporting>
 </project>
-
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.076 s
-[INFO] Finished at: 2021-03-12T11:01:27-05:00
-[INFO] ------------------------------------------------------------------------
