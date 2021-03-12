@@ -24,7 +24,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Package with maven
-      run: mvn clean install -DskipTests=true
+      run: |
+        mvn clean install -N
+        mvn clean install -DskipTests=true
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
