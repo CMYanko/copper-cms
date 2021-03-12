@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.pogeyan.cmis</groupId>
 		<artifactId>root</artifactId>
-		<version>${app.version}</version>
+		<version>1.15.2</version>
 	</parent>
 	<artifactId>copper-server-api</artifactId>
 	<name>copper-server-api</name>

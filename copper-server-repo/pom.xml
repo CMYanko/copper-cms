@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.pogeyan.cmis</groupId>
 		<artifactId>root</artifactId>
-		<version>${app.version}</version>
+		<version>1.15.2</version>
 	</parent>
 	<artifactId>copper-server-repo</artifactId>
 	<name>copper-server-repo</name>
@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>com.pogeyan.cmis</groupId>
 			<artifactId>copper-server-api</artifactId>
-			<version>${app.version}</version>
+			<version>1.15.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
