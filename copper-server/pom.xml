@@ -16,6 +16,7 @@
     <groupId>com.pogeyan.cmis</groupId>
     <artifactId>root</artifactId>
     <version>1.15.2</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.pogeyan.cmis</groupId>
   <artifactId>copper-server</artifactId>
