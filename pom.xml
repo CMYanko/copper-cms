@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.pogeyan.cmis</groupId>
 	<artifactId>root</artifactId>
-	<version>${app.version}</version>
+	<version>1.15.2</version>
 	<packaging>pom</packaging>
 	<name>Root</name>
 	<description>        Pogeyan Mongo CMIS is an implementation of the OASIS CMIS specification.    </description>
