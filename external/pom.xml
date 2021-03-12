@@ -23,7 +23,7 @@
   <parent>
     <groupId>com.pogeyan.cmis</groupId>
     <artifactId>root</artifactId>
-    <version>${app.version}</version>
+    <version>1.15.2</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.pogeyan.cmis</groupId>
